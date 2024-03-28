@@ -4,9 +4,7 @@
   "description": "Landing page for natours",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w",
-    "start": "index.html",
-    "build": "build index.html --dist-dir ./dist"
+    "build": "node-sass sass/main.scss css/style.css && echo 'Build complete'"
   },
   "author": "Amir",
   "license": "ISC",
