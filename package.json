@@ -4,6 +4,7 @@
   "description": "Landing page for natours",
   "main": "index.js",
   "scripts": {
+    "start": "live-server",
     "build": "node-sass sass/main.scss css/style.css && echo 'Build complete'"
   },
   "author": "Amir",
