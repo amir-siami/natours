@@ -21,10 +21,6 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.4s 0.2s;
-
-    @include respond(tab-port) {
-      display: block;
-    }
   }
 
   &__left {
@@ -32,8 +28,14 @@
     display: table-cell;
 
     @include respond(tab-port) {
-      display: flex;
+      position: absolute;
+      left: 0;
+      top: 0;
       width: 100%;
+      display: block;
+      z-index: -1;
+      bottom: 0;
+      right: 0;
     }
   }
 
@@ -44,8 +46,9 @@
     padding: 3rem 5rem;
 
     @include respond(tab-port) {
-      display: block;
       width: 100%;
+      display: block;
+      padding: 2rem;
     }
   }
 
@@ -53,8 +56,17 @@
     display: block;
     width: 100%;
 
-    @include respond(tab-port) {
-      width: 49.9999%;
+    &:first-child {
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+    &:nth-child(2) {
+      @include respond(tab-port) {
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.4;
+      }
     }
   }
 
